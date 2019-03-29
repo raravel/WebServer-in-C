@@ -1,0 +1,29 @@
+<!-- post.html -->
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>post page</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			const ajax_submit = () => {
+				$.ajax({
+					url: "/",
+					type: "POST",
+					dataType: "text",
+					data: { value1: $('#val1').val(), value2: $('#val2').val() },
+					success: (data) => {
+						$('#result').text(data);
+					}
+				});
+			};
+		</script>
+		<form action="/" method="POST">
+			<input type="text" id="val1" name="value1"> + <input type="text" id="val2" name="value2"> = <label id="result"></label> <br>
+			<input type="submit" value="form submit">
+		</form>
+		<button onclick="ajax_submit();"> ajax submit </button>
+	</body>
+</html>

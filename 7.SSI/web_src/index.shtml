@@ -1,0 +1,14 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h2> #include virtual </h2>
+		<!--#include virtual="exec/exec.shtml"-->
+		<h2> #include abspath </h2>
+		<!--#include abspath="/home/youn/mongoose-master/study/7.SSI/web_src/call/call.shtml"-->
+		<h2> #include file </h2>
+		<!--#include file="./hello/hello.shtml"-->
+	</body>
+</html>
